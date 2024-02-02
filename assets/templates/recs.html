@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Category Form</title>
+   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">IT AssetManagement System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'dash' %}">Admin-Dashbaord</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post" action="{% url 'recs'%}">
+                    {% csrf_token %}
+                    <h2>Add/Edit Category Records</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="ename" name="name" placeholder="Enter Category name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="desc"  name="desc" placeholder="Enter Description">
+                    </div>
+                   
+                    
+                    
+                    <button style="width: 300px;" type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2024 IT AssetManagement. All rights reserved.</p>
+  </footer>
+
+ 
+<!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-dpSTGEtT3tB5t5dL5e2p0g1LeEkmS4NHFOZiFIO6ZFqIY7ZaNi0JIc5DCQEQoo/E" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyMKbNFSeE3Zl/6o5eTKh5Ik4JjQb" crossorigin="anonymous"></script>
+
+</body>
+</html>
